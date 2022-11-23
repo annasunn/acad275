@@ -1,0 +1,185 @@
+<html>
+<head>
+    <title>Build Your Own</title>
+<style>
+body{
+    font-family: sans-serif;
+    color:black;
+    background-color:white;
+    padding:40px;
+}
+.parent {
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+.child {
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+    width:400px;
+    position:relative;
+    height:600px;
+}
+#nav{
+    text-align: right;
+}
+#nav ul{
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+  display:flex;
+  justify-content: space-around;
+}
+#nav a {
+  padding: 10px 50px;
+  color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+}
+#nav a:hover {
+    color: #574EC5;
+}
+#nav a.active {
+    color:#574EC5;
+}
+#input{
+    background-color: #EEEEEE;
+    border-radius: 20px;
+    padding:20px;
+    height:600px;
+    text-align: left;
+}
+#conversion{
+    background-color:white;
+    border-style: solid;
+    border-color:black;
+    border-width: 1px;
+    border-radius: 20px;
+    padding:20px;
+    width:450px;
+    height:150px;
+    text-align: left;
+    font-size: large;
+}
+#graph{
+    background-color:white;
+    border-style: solid;
+    border-color:black;
+    border-width: 1px;
+    border-radius: 20px;
+    padding:20px;
+    padding-left: 30px;
+    width:450px;
+    height:390px;
+    text-align: center;
+}
+#answer{
+    justify-content: center;
+    width:440px;
+    height:70px;;
+    border-style: solid;
+    border-color:black;
+    border-width: 1px;
+    border-radius: 15px;
+}
+#type{
+    width:350px;
+    height:100px;
+    font-size: medium;
+}
+#equal{
+    text-align: center;
+    font-size: medium;
+}
+#mL{
+    width:40px;
+    font-size: medium;
+}
+#id{
+    font-size: medium;
+    width:350px;
+}
+#yes{
+    font-size: medium;
+    width:300px;
+
+}
+#submit{
+    background: #574EC5;
+	color: white;
+	border-style: solid;
+	border-color: #574EC5;
+    border-radius:15px;
+	height: 50px;
+	width: 100px;
+	font-size:medium;
+	text-shadow: none;
+    text-align: center;
+}
+</style>
+<script></script>
+</head>
+<body>
+<div id="outercontainer">
+    <div id="nav">
+        <a href=".html">About</a>
+        <a href=".html">Orthodox</a>
+        <a href=".html">Unorthodox</a>
+        <a href=".html">Educate</a>
+        <a href="buildyourown.html">Build Your Own</a>
+    </div>
+
+<div class='parent'>
+    <div class='child'>
+        <div id="input">
+        <form>
+            <br>
+            <select name="type" id="type">
+                <option value="volume">Volume</option>
+                <option value="distance">Distance</option>
+            </select>
+            <br><br><br>
+            <h3>Unit 1:</h3>
+            <input id="id" type="text" name="unit name" autofocus='1' placeholder="unit name"/><br/>
+            <p id="equal">is equivalent to...</p>
+            <input id="yes" type="text" name="answer" autofocus='1'/>
+            <input id="mL" type="text" name="mL" autofocus='1' placeholder="mL"/>
+            <p id="equal"><u>+ add another unit</u></p>         
+            <h3>Unit 2:</h3>
+            <input id="id" type="text" name="unit name" autofocus='1' placeholder="unit name"/><br/>
+            <p id="equal">is equivalent to...</p>
+            <input id="yes" type="text" name="answer" autofocus='1'/>
+            <input id="mL" type="text" name="mL" autofocus='1' placeholder="mL"/>
+            <p id="equal"><u>+ add another unit</u></p>
+            <br><br><br>
+            <div id="equal">
+                <input id="submit" type="submit" value="Submit!"/> 
+            </div>
+        </form>
+        </div>
+    </div>
+    <div class='child'>
+        <div id="conversion">
+            <h3>Unit Conversion:</h3>
+            <div id="answer"></div>
+        </div>
+        <br>
+        <div id="graph">
+            <br><br>
+            <div>
+                <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+                <label for="radio-one">Graph</label>
+                <input type="radio" id="radio-two" name="switch-one" value="no" />
+                <label for="radio-two">Image</label>
+            </div>
+            <br><br><br>
+            <h3>Visual Representation of Unit Conversion:</h3><br>
+            <img src="graphex.jpg" width="390px" height="160px">
+        </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script></script>
+</html>
