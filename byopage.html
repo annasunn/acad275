@@ -1,0 +1,259 @@
+<html>
+<head>
+
+    <title>Build Your Own</title>
+
+    <style>
+    body{
+        margin:0px;
+        font-family:sans-serif;
+    }
+    #header2{
+        width:100%;
+        height:70px;
+        background-color: white;
+        opacity: 0.5;
+        position: absolute;
+        z-index: 0;
+        margin:0;
+        padding:0;
+    }
+    #links{
+        float: right;
+        margin-top:10px;
+    }
+    .link{
+        text-decoration: none;
+        margin:20px;
+        color:black;
+    }
+    #byo{
+        padding:13px;
+        margin:0;
+        border-radius: 30px;
+        background-color:#824EC5 ;
+        color:white;
+    }
+    #buildyourown{
+        background-image: linear-gradient(#824EC5, #5D34FF);
+        width: 50%;
+        padding: 100px 0 100px 0;
+        text-align: left;
+        float: center;
+        position:relative;
+        height:800px;
+        display:inline-block;
+        z-index: -1;
+    }
+    #conversionandvisual{
+        background-color: white ;
+        width: 50%;
+        padding: 100px 0 100px 0;
+        text-align: center;
+        float: center;
+        position:fixed;
+        height:600px;
+        display:inline-block;
+        z-index: -1;
+    }
+    #input{
+        background-color: #EEEEEE;
+        border-radius: 20px;
+        padding:20px;
+        height:600px;
+        text-align: left;
+        font-weight:lighter;
+    }
+    #answer{
+        justify-content: center;
+        display:inline-block;
+        width:350px;
+        height:60px;
+        border-style: solid;
+        border-color:black;
+        border-width: 0.25px;
+        border-radius: 5px;
+        font-size: large;
+        font-weight:lighter;
+    } 
+    #submit{
+        background:white;
+        color: #574EC5;
+        border-style: solid;
+        border-color: white;
+        border-radius:15px;
+        height: 50px;
+        width: 100px;
+        font-size:medium;
+        text-shadow: none;
+        text-align: center;
+        font-weight:bold;
+        opacity:100%;
+    }
+    h1, h2, h3{
+        font-weight: normal;
+    }
+    option{
+        justify-content: center;
+        width:300px;
+        height:40px;;
+        border-style: solid;
+        border-color:black;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+    input{
+        justify-content: center;
+        width:300px;
+        height:40px;
+        border-radius: 5px;
+        font-size: large;
+        opacity:80%;
+    }
+    #mL{
+    width:35px;
+    font-size: large;
+    font-weight:lighter;
+    
+    }
+    #equal{
+        text-align: center;
+    }
+    #toggle{
+
+    }
+    #content{
+        width: 411px;
+        height: 444px;
+        display: inline-block;
+        float:center;
+        opacity:80%;
+        padding-left: 60px;
+    }
+    #type{
+        width:300px;
+        height:40px;
+        font-size: medium;
+        opacity:80%;
+    }
+    #icons{
+        width:300px;
+        height:40px;
+        font-size: medium;
+        opacity:80%;
+    }
+    #yes{
+        width:260px;
+        opacity:80%;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header2">
+
+    <br>
+    <div id="links">
+    <a href id="about" class="link" src="about.html"> About </a>
+    <a href id="orthodox" class="link" src="ortho.html"> Orthodox </a>
+    <a href id="unorthodox" class="link" src="unortho.html"> Unorthodox </a>
+    <a href id="educate" class="link" src="educate.html"> Educate </a>
+    <a href id="byo" class="link" src="byo.html"> Build Your Own </a>
+    </div>
+</div>
+    <div id="buildyourown">
+        
+        <div style="text-align: center;">
+        <form style="display:inline-block; text-align: left">
+            <br><p><h1 style="color:white"><b>Build Your Own</b></h1></p>
+            
+
+            <h2 style="color:white; font-weight: lighter;">Unit 1:</h2>
+
+            <select name="type" id="type">
+                <option value="volume">Volume</option>
+                <option value="distance">Distance</option>
+                <option value="speed">Speed</option>
+            </select><br>
+
+            <p><input id="id" type="text" name="unit name" autofocus='1' placeholder="Unit name"/></p>
+
+            <select name="type" id="icons" placeholder="Choose your icon" name="Choose your icon">
+                <option value="square">Square</option>
+                <option value="circle">Circle</option>
+                <option value="triangle">Triangle</option>
+            </select>
+
+            <p id="equal" style="color:white; font-weight: bold; text-align: center;">is equivalent to...</p>
+
+            <input id="yes" type="text" name="answer" autofocus='1'/>
+
+            <input id="mL" type="text" name="mL" autofocus='1' placeholder="mL"/><br><br>
+            
+            
+            <h2 style="color:white; font-weight: lighter;">Unit 2:</h2>
+
+            <select name="type" id="type">
+                <option value="volume">Volume</option>
+                <option value="distance">Distance</option>
+                <option value="speed">Speed</option>
+            </select><br>
+
+            <p><input id="id" type="text" name="unit name" autofocus='1' placeholder="Unit name"/></p>
+
+            <select name="type" id="icons" placeholder="Choose your icon" name="Choose your icon">
+                <option value="square">Square</option>
+                <option value="circle">Circle</option>
+                <option value="triangle">Triangle</option>
+            </select>
+
+            <p id="equal" style="color:white; font-weight: bold; text-align: center;">is equivalent to...</p>
+
+            <input id="yes" type="text" name="answer" autofocus='1'/>
+
+            <input id="mL" type="text" name="mL" autofocus='1' placeholder="mL"/><br><br><br>
+
+            <p id="equal" style="color:white; font-weight: lighter; text-align: center"><u>+ add another unit</u></p><br>
+
+
+            <div id="equal">
+                <input id="submit" type="submit" value="Submit!" style="text-align: center"/> 
+            </div>
+
+        </form>
+        </div>
+        
+    </div>
+
+
+    <div id="conversionandvisual">
+
+        <div id="content"  style="text-align: left">
+            <p><div style="text-align:left; display:inline-block">
+            <h1 style="font-weight: lighter">Unit Conversion</h1>
+            
+            <div id="answer">
+                <input id="answer">
+            </div></p><br><br>
+
+            <h1 style="text-align:left; font-weight: lighter">Visual Representation</h1>
+            
+            <div id="toggle">
+                <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+            </div>
+
+            //graph //image rep
+            </div>
+        </div>
+    
+    </div>
+
+    <script>
+    
+    </script>
+
+</body>
+
+</html>
