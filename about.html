@@ -1,94 +1,166 @@
 <html>
-  <head>
-    <title>Team Webpage</title>
-    <style>
-      body{
-	font-family: Arial, Helvetica, sans-serif;
-	padding: 20 30 20 30;
-	}
-      .member{
-	border-radius:10px;
-        padding:10px;
-        background-color:thistle;
-        text-align: center;
-      }
+    <title>About page</title>
+    <head>
+        <style>
+        @media screen and (max-width:800px) {
+            #header{
+                display: flex;
+                flex-direction: column;
+        }   
+        }
+        .navlink{
+            color:rgb(255, 255, 255); 
+            text-decoration:none;
+        } 
+        .navlink1{
+            color:rgb(255, 255, 255); 
+            text-decoration:none;
+            padding-left: 5px;
+            
+        } 
+        .navlink:hover{
+            color:#000000;
+            text-decoration: none;
+        }
+        #header{
+            width:100%;
+            padding-top:2%;
+            text-align: center;
+            font-size:24px;
+            display:flex;
+            justify-content: space-between;
+        }
+        
+        #content2{
+            padding-top: 1%;
+            background-color: #D9D9D9;
+            width:90%;
+            height:auto;
+            margin:auto;
+            padding-left: 2%;
+            padding-bottom: 3%;
+        }
+        #content3{
+            background-color: #D9D9D9;
+            width:90%;
+            height:auto;
+            margin:auto;
+            padding: 2% 1% 2% 1%;
+        }
+        h2{
+            padding-left: 2.5%;
+        }
       .pic{
         width:50%;
       }
-      #leftmember{
-        width:40%;
-        position:absolute;
-      }
-      #rightmember{
-        width:40%;
-        margin-left:50%;
-        display:inline-block;
-      }
+     .grid{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: #A1A1A1;
+        text-align:center;
+        padding: 2% 1% 2% 1%;
+     }
       .membertitle{
         font-size:1.3em;
+
+      }
+      #annapic{
+        width:30%;
+        height:auto;
+      }
+      #zacpic{
+        width:30%;
+        height:auto;
+      }
+      #karenpic{
+        width:30%;
+        height:auto;
+      }
+      #pampic{
+        width:30%;
+        height:auto;
+      }
+      .background{
+        background: rgb(128,70,205);
+        background: linear-gradient(180deg, rgba(128,70,205,1) 20%, rgba(97,40,252,1) 100%);
+        width:100%;
+        z-index: auto;
       }
     </style>
-    <script src=jquery-3.6.1.min.js></script>
-    <script>
-			
-    </script>
-  </head>
-  
-  <body>
-    <h1 style="text-align:center;">Heuristic Heretics Design</h1>
-	<h2>Unconventional Units Calculator</h2>
-	  
-    The Unconventional Units Calculator is designed to be a webpage where people can go to discover and express ordinary things in unorthodox ways.
-    <br><br>
-	  <em>Key features:</em>
-    <ul><li>Calculating length/width/distance, weight, volume, and speed.</li>
-        <li>Visual representation of units (chart or lines of visuals).</li>
-        <li>Hover feature describing units and sources. </li>
-        <li>Users can submit their unique units to be calculated through the website.</li></ul>
-    <br><br>
-	  
-    <h2>Team Members</h2>
-    <div id="leftmember">
-        <div id="anna" class="member">
-            <div id="annatitle" class="membertitle">Anna Sun</div>
-        <br>
-            <div id="annainfo" class="memberinfo">   
-                <img id="annapic" src= "http://webdev.iyaclasses.com/~annasun/acad275/indiv_proj/abtimg.png">       
-                Anna has experience with UX design, leadership, java and python.
-            </div>
-        </div><br>
-        
-        <div id="karen" class="member">
-            <div id="karentitle" class="membertitle">Karen Cho</div>
-        <br>
-            <div id="kareninfo" class="memberinfo">   
-                <img id="karenpic" src= >       
-                Karen has experience with graphic design,leadership, and marketing.
-            </div>
+    </head>
+    <body>
+        <div class="background">
+        <div id="header">
+            <img src="IMG_2829.PNG" class="navlink1" width="80px">
+            <a class="navlink" href="">About</a>
+            <a class="navlink" href="">Unorthodox</a>
+            <a class="navlink" href="">Orthodox</a>
+            <a class="navlink" href="">Educate</a>
+            <a class="navlink" href="">Build Your Own</a>
         </div>
-   </div>
-    
-  <div id="rightmember">
-	 <div id="zac" class="member">
-            <div id="zactitle" class="membertitle">Zac </div>
-        <br>
-            <div id="zacinfo" class="memberinfo">   
-                <img id="zacpic" src= >       
-                Zac has experience with ux design, creative consultation, and writing.
-            </div>
-        </div><br>
 
-	<div id="pam" class="member">
-            <div id="pamtitle" class="membertitle">Pamela Xiang</div>
-        <br>
-            <div id="paminfo" class="memberinfo">   
-                <img id="pampic" src= "http://webdev.iyaclasses.com/~pamelaxi/acad275/pampic.JPG" width="90px">       
-                Pamela has experience with graphic design, advertising strategy, and innovative projects.
+        <div id="content2">
+            <h2>Unconventional Units Calculator</h2>
+            <br>
+            <em>Key features:</em>
+          <ul><li>Calculating length/width/distance, weight, volume, and speed.</li>
+              <li>Visual representation of units (chart or lines of visuals).</li>
+              <li>Hover feature describing units and sources. </li>
+              <li>Users can submit their unique units to be calculated through the website.</li></ul>
+          <br>
+          </div>
+          <br>
+        <div id="content3">
+            <h2>Team Members</h2>
+            <div class="grid">
+                <div id="anna" class="member">
+                    <div id="annatitle" class="membertitle">Anna Sun</div>
+                <br>
+                    <div id="annainfo" class="memberinfo">   
+                        <img id="annapic" src= "http://webdev.iyaclasses.com/~annasun/acad275/indiv_proj/abtimg.png" >       
+                        <p><b>Project Manager:</b> Anna Sun</p>
+                        <p>Anna has experience with UX design, leadership, java and python.
+                        </p>
+                        </div>
+                </div><br>
+            
+                <div id="karen" class="member">
+                    <div id="karentitle" class="membertitle">Karen Cho</div>
+                <br>
+                    <div id="kareninfo" class="memberinfo">   
+                        <img id="karenpic" src="http://webdev.iyaclasses.com/~karenhch/acad275/mee.jpg" width="90px">       
+                        <p><b>HTML/CSS Developer:</b> Karen Cho</p>
+                        <p> Karen has experience with graphic design, leadership, and marketing.
+                    </p>
+                    </div>
+                </div>
+            
+             <div id="zac" class="member">
+                    <div id="zactitle" class="membertitle">Zac Conner </div>
+                <br>
+                    <div id="zacinfo" class="memberinfo"> 
+                        <img id="zacpic" src="http://webdev.iyaclasses.com/~zconner/acad275/newprofpic.jpg" width="90px">       
+                        <p><b>JS Developer:</b> Zac Conner</p>
+                        <p>Zac has experience with ux design, creative consultation, and writing.
+                        </p>
+                        </div>
+                </div><br>
+            <div id="pam" class="member">
+                    <div id="pamtitle" class="membertitle">Pamela Xiang</div>
+                <br>
+                    <div id="paminfo" class="memberinfo"> 
+                        <img id="pampic" src= "http://webdev.iyaclasses.com/~pamelaxi/acad275/pampic.JPG" width="90px">       
+                        <p><b>UI/UX designer:</b> Pamela Xiang</p>
+                        <p>Pamela has experience with graphic design, advertising strategy, and innovative projects.
+                        </p>
+                        </div>
+                </div>
             </div>
+          </div>
+              
+            </div>
+                
+
         </div>
-  </div>
-    
-    <script>
-    </script>
-  </body>
-</html> 
+    </body>
+</html>
