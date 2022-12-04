@@ -4,36 +4,64 @@
         <style>
             body{
                 font-family: sans-serif;
+                margin:0px;
+            }
+            #header{
+                width:100%;
+                height:300px;
+                background-image: linear-gradient(#824EC5, #5D34FF);
+                position: absolute;
+                z-index: -2;
+            }
+            #header2{
+                width:100%;
+                height:70px;
+                background-color: white;
+                opacity: 0.5;
+                position: absolute;
+                z-index: -1;
             }
             #links{
                 float: right;
+                margin-top:10px;
             }
             .link{
                 text-decoration: none;
                 margin:20px;
                 color:black;
             }
+            #byo{
+                padding:13px;
+                border-radius: 30px;
+                background-color:#824EC5 ;
+                color:white;
+            }
             #history{
-                width:30%;
+                width:29%;
                 display: inline-block;
-                margin:1.5%;
+                margin:2%;
                 text-align: center;
+                border-width: 1px;
+                border-style: solid;
             }
             #historytitle{
                 text-decoration: none;
-                color:black;
+                color:black;                
             }
             #historypic{
-                width:100%;
-                height: 175px;
+                width:60%;
+                height: auto;
                 border-radius: 5px;
             }
 
             #global{
-                width:30%;
+                width:29%;
                 display: inline-block;
-                margin:1.5%;
+                margin:1.7%;
                 text-align: center;
+                border-width: 1px;
+                border-style: solid;
+
             }
             #globaltitle{
                 text-decoration: none;
@@ -41,16 +69,18 @@
             }
             #globalpic{
                 width:100%;
-                height: 175px;
+                height: auto;
                 border-radius: 5px;
-
+                position: relative;
+                z-index: 1;
             }
             #funfacts{
-                width:30%;
+                width:29%;
                 display: inline-block;
-                margin:1.5%;
+                margin:1.7%;
                 text-align: center;
-
+                border-width: 1px;
+                border-style: solid;
             }
             #funfactstitle{
                 text-decoration: none;
@@ -58,18 +88,30 @@
             }
             #funfactspic{
                 width:100%;
-                height: 175px;
-                background-image: url(funfact.jpeg);
-                background-size: cover;
+                height: auto;
                 border-radius: 5px;
-
             }
+            @media screen and (max-width:900px){
+                #history{
+                    width:90%;
+                    margin-left:5%;
+                }
+                #global{
+                    width:90%;
+                    margin-left:5%;
+                }
+                #funfacts{
+                    width:90%;
+                    margin-left:5%;
+                }
+            };
         </style>
-        <script>
-
-        </script>
+        <script src="jquery-3.6.1.min.js"></script>
     </head>
     <body>
+        <div id="header"></div>
+        <div id="header2"></div>
+
         <br>
         <div id="links">
         <a href id="about" class="link" src="about.html"> About </a>
@@ -79,41 +121,64 @@
         <a href id="byo" class="link" src="byo.html"> Build Your Own </a>
         </div>
 
-        <br>
-        <br style="clear:both">
-        <h1 style="text-align: center;">All Things Conversion</h1>
+        <br><br><br><br>
+        <br style="clear:both"><br>
+        <h1 style="text-align: center;color:white">All Things Conversion</h1>
+        <br><br><br><br><br>
+
 
         <div id="history">
-            <a href="history.html"><img id=historypic src="history.jpeg"></a>
+            <a href="history.html"><img id=historypic src="history.png"></a>
+            <br style="clear: both"><br>
             <a href="history.html" id="historytitle">The History of Conversions</a>
 
         </div>
 
         <div id="global">
-            <a href="global.html"><img id=globalpic src="global.webp"></a>
+            <a href="global.html"><img id=globalpic src="globe.png"></a>
             <a href="global.html" id="globaltitle">Conversion Around the World</a>
         </div>
 
         <div id="funfacts">
-            <a href="funfact.html"><img id=funfactspic src="funfact.jpeg"></a>
+            <a href="funfact.html"><img id=funfactspic src="funs.png"></a>
             <a href="funfact.html" id="funfactstitle">Fun Facts About Conversion</a>
         </div>
-        <!-- duplicated above divs for later content -->
-        <div id="history">
-            <a href="history.html"><img id=historypic src="history.jpeg"></a>
-            <a href="history.html" id="historytitle">The History of Conversions</a>
+        <script>
+            // $("#history").hover(function(){
+            //     $("#history").css("border-width","3px");
 
-        </div>
-
-        <div id="global">
-            <a href="global.html"><img id=globalpic src="global.webp"></a>
-            <a href="global.html" id="globaltitle">Conversion Around the World</a>
-        </div>
-
-        <div id="funfacts">
-            <a href="funfact.html"><img id=funfactspic src="funfact.jpeg"></a>
-            <a href="funfact.html" id="funfactstitle">Fun Facts About Conversion</a>
-        </div>
-
+            //     // $(this).css("border-image","linear-gradient(to bottom, #824EC5, #5D34FF) 1");
+            // });
+            // $("#history").hover(function{
+            //     border-image: linear-gradient(to bottom, #824EC5, #5D34FF) 1;
+            // });
+            $("#history").hover(
+                function(){
+                    $(this).css("border-width", "3px")
+                    $(this).css("border-image", "linear-gradient(to bottom, #824EC5, #5D34FF) 1");
+                },
+                function(){
+                    $(this).css("border-width", "1px")
+                    $(this).css("border-image", "linear-gradient(to bottom, #000000, #000000) 1");
+                });
+            $("#global").hover(
+                function(){
+                    $(this).css("border-width", "3px")
+                    $(this).css("border-image", "linear-gradient(to bottom, #824EC5, #5D34FF) 1");
+                },
+                function(){
+                    $(this).css("border-width", "1px")
+                    $(this).css("border-image", "linear-gradient(to bottom, #000000, #000000) 1");
+                });            
+            $("#funfacts").hover(
+                function(){
+                    $(this).css("border-width", "3px")
+                    $(this).css("border-image", "linear-gradient(to bottom, #824EC5, #5D34FF) 1");
+                },
+                function(){
+                    $(this).css("border-width", "1px")
+                    $(this).css("border-image", "linear-gradient(to bottom, #000000, #000000) 1");
+                });
+        </script>
     </body>
 </html>
