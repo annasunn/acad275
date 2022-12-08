@@ -116,7 +116,7 @@
                 float:right;
                 margin-right:7.5%;
                 margin-top:10px;
-                border-color: rgb(196, 195, 195);
+                border-color: #824EC5;
                 border-width: 2px;
                 border-style: solid;
                 border-radius: 30px;
@@ -132,12 +132,13 @@
             }
             #caption{
                 width:90%;
-                height:50px;
+                height:auto;
                 background-color: rgb(227, 227, 227);
                 border-radius: 30px;
                 margin: auto;
                 text-align: center;
-                padding-top:6px;
+                padding: 6 6 6 6;
+
             }
 
 
@@ -244,7 +245,7 @@
         <br><br>
         Below is a interactive photo gallery of some significant figure in the birth of units:
         </div>
-
+<br>
         <div id="thumbcolumn">
             <img id="first" class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/7/79/Bp_John_Wilkins.jpg">
 
@@ -253,13 +254,12 @@
             <img id="third" class="thumb" src="https://mathshistory.st-andrews.ac.uk/Biographies/Mouton/mouton_1.jpg">
         </div>
         <div id="mainphoto">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Bp_John_Wilkins.jpg" id="bigpicture">
+            <img src="https://www.agosto-foundation.org/sites/default/files/picture/file1175_1.jpg" id="bigpicture">
             <br style="clear:both">
             <div id="caption">
-                <span id="captionphrase"></span>
+                <span id="captionphrase">The metric system is a system of measurement that uses the meter, liter, and gram as base units of length (distance), capacity (volume), and weight (mass) respectively. To measure smaller or larger quantities, we use units derived from the metric units.</span>
             </div>
         </div>
-
     </body>
     <script>
       $(".thumb").hover(
@@ -274,7 +274,7 @@
                 $("#bigpicture").hide();
                 $("#caption").hide();
                 $("#bigpicture").attr("src","https://upload.wikimedia.org/wikipedia/commons/7/79/Bp_John_Wilkins.jpg").fadeIn(1000);
-                $("#caption").html("John Wilkins");
+                $("#caption").html("<p><strong>John Wilkins</p></strong> John Wilkins was an English mathematician who was one of the founders of the Royal Society. He wrote on astronomy and mechanical machines.");
                 $("#caption").fadeIn(1000);
                 $(".thumb").css("border-width","0px")
                 $("#first").css("border-width","2px").css("border-color","grey").css("border-style","solid");
@@ -283,7 +283,7 @@
                 $("#bigpicture").hide();
                 $("#caption").hide();
                 $("#bigpicture").attr("src","https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Rev_John_Wilkins%2C_Chester.jpg/170px-Rev_John_Wilkins%2C_Chester.jpg").fadeIn(1000);
-                $("#caption").html("John Wilkins");
+                $("#caption").html("<p><strong>John Wilkins</p></strong> <p>Born: 1614, Fawsley (4 km S of Daventry), Northamptonshire, England.</p><p> Died: 19 November 1672, Chester, England</p>");
                 $("#caption").fadeIn(1000);
                 $(".thumb").css("border-width","0px")
                 $("#second").css("border-width","2px").css("border-color","grey").css("border-style","solid");
@@ -292,7 +292,7 @@
                 $("#bigpicture").hide();
                 $("#caption").hide();
                 $("#bigpicture").attr("src","https://mathshistory.st-andrews.ac.uk/Biographies/Mouton/mouton_1.jpg").fadeIn(1000);
-                $("#caption").html("Gabriel Mouton");
+                $("#caption").html("<p><strong>Gabriel Mouton</p></strong> Gabriel Mouton, the vicar of St. Paul's Church in Lyon, France, and a noted mathematician and astronomer, suggested a linear measure based on the arc of one minute of longitude, to be subdivided decimally.");
                 $("#caption").fadeIn(1000);
                 $(".thumb").css("border-width","0px")
                 $("#third").css("border-width","2px").css("border-color","grey").css("border-style","solid");
