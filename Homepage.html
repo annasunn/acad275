@@ -1,10 +1,15 @@
+
+
 <html>
     <title>Homepage</title>
         <script src="jquery-3.6.1.min.js"></script>
+        <meta charset="utf-8">
     <head>
         <style>
             body{
             color:rgb(255, 255, 255);
+            margin:0px;
+        font-family:sans-serif;
         }
         @media screen and (max-width:800px) {
             #header{
@@ -12,22 +17,69 @@
                 flex-direction: column;
         }   
         }
-        .navlink{
-            color:rgb(255, 255, 255); 
-            text-decoration:none;
-        } 
-        .navlink:hover{
-            color:#000000;
-            text-decoration: none;
-        }
-        #header{
-            width:100%;
-            padding-top:2%;
-            text-align: center;
-            font-size:24px;
-            display:flex;
-            justify-content: space-between;
-        }
+        #navbar{
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    padding-top: 25px;
+    padding-left: 15%;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+#logoimg{
+    width: 40px;
+    flex: 20%;
+}
+#links{
+    flex: 80%;
+    float: right;
+    margin-top: 20px;
+    margin-right: 50px;
+    text-align: center;
+}
+.navlink{
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    padding: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.navlink:link{
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: none;
+    transition: 0.5s;
+
+}
+.navlink:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+
+
+
+@media screen and (max-width: 900px){
+
+    #logo{
+        float: left;
+    }
+    #logoimg{
+        height: 10px;
+    }
+    #links{
+        float: none;
+        display: inline-block;
+        flex-direction: column;
+        text-align: left;
+    }
+    
+}
+
         #slogan{
             font-size: 60px;
         }
@@ -46,7 +98,7 @@
             width:60%;
             margin:auto;
         }
-        #subslogan1{
+        .subslogan1{
             font-size:24px;
             /* margin: 0% 0% 0% 20%; */
             border-style: solid;
@@ -56,7 +108,7 @@
             padding-top: 1%;
             border-radius: 35px;
         }
-        #subslogan2{
+        .subslogan2{
             font-size:24px;
             /* margin: -6.5% 0% 0% 40%; */
             border-style: solid;
@@ -66,7 +118,7 @@
             padding-top: 1%;
             border-radius: 35px;
         }
-        #subslogan3{
+        .subslogan3{
             font-size:24px;
             /* margin: -6.5% 0% 0% 60%; */
             border-style: solid;
@@ -81,7 +133,7 @@
         background: linear-gradient(180deg, rgba(128,70,205,1) 20%, rgba(97,40,252,1) 100%);
             background-repeat: repeat-y;
             width:100%;
-            height:120%;
+            height:100%;
       }
       .texture{
         background-image: url("texture.png");
@@ -89,34 +141,58 @@
                 background-repeat: repeat-y;
                 width:100%;
       }
+      #logoimg{
+        width:60px;
+        height:auto;
+      }
+      #text1{
+        text-decoration: none;
+        color:white;
+      }
+      #text2{
+        text-decoration: none;
+        color:white;
+      }
+      #text3{
+        text-decoration: none;
+        color:white;
+      }
     </style>
     </head>
     <body>
     <div class="background">
     <div class="texture">
-        <div id="header">
-            <img src="IMG_2829.PNG" class="navlink1" width="80px">
-            <a class="navlink" href="">About</a>
-            <a class="navlink" href="">Unorthodox</a>
-            <a class="navlink" href="">Orthodox</a>
-            <a class="navlink" href="">Educate</a>
-            <a class="navlink" href="">Build Your Own</a>
+
+        <div id="navbar">
+            <div id="logo">
+                <a href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/Homepage.html">
+                    <img id="logoimg" src="http://webdev.iyaclasses.com/~pamelaxi/acad275/IMG_2829.PNG">
+                </a>
+            </div>
+        <div id="links">
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/About.html">About</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/unor.html">Unorthodox</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/orth.html">Orthodox</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/Educate.html">Educate</a>
+            <a class="navlink" id="byo" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/byo.html">Build your own</a>
         </div>
+        </div>
+
         <div id="content2">
             <div id="slogan">Convert anything.</div>
             <div id="sub">With Unorthodx Converter, you can make any type of conversion.</div>
         </div>
         <div id="content3">
-            <p><div id="subslogan1">Orthodx Converter</div></p>
-            <p><div id="subslogan2">Unorthodx Converter</div></p>
-            <p><div id="subslogan3">Build Your Own</div></p>
+            <p><a id="text1" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/orth.html"><div class="subslogan1">Orthodox Converter</div></a></p>
+            <p><a id="text2" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/unor.html"><div class="subslogan2">Unorthodox Converter</div></a></p>
+            <p><a id="text3" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/byo.html"><div class="subslogan3">Build Your Own</div></a></p>
         </div>
     </div>
     </div>
     </body>
     <script>
         $(document).ready(function(){
-	$('#subslogan1').hover(function(){
+	$('.subslogan1').hover(function(){
 		$('.background').css('background','#fcb045');
   	},
       function(){
@@ -125,7 +201,7 @@
   });
 
   $(document).ready(function(){
-  $('#subslogan2').hover(function(){
+  $('.subslogan2').hover(function(){
 		$('.background').css('background','#3f5efb');
   	},
       function(){
@@ -134,7 +210,7 @@
 });
 
 $(document).ready(function(){
-  $('#subslogan3').hover(function(){
+  $('.subslogan3').hover(function(){
 		$('.background').css('background','#94bbe9');
   	},
       function(){
