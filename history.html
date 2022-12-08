@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <title>The History of Conversion</title>
@@ -137,7 +136,7 @@
                 border-radius: 30px;
                 margin: auto;
                 text-align: center;
-                padding: 6 6 6 6;
+                padding: 10 10 10 10;
 
             }
 
@@ -206,7 +205,7 @@
                     margin:auto;
                 }
                 #bigpicture{
-                    width:70%;
+                    height:60%;
                     border-radius: 10px;
                     margin-left:15%
                 }
@@ -254,10 +253,10 @@
             <img id="third" class="thumb" src="https://mathshistory.st-andrews.ac.uk/Biographies/Mouton/mouton_1.jpg">
         </div>
         <div id="mainphoto">
-            <img src="https://www.agosto-foundation.org/sites/default/files/picture/file1175_1.jpg" id="bigpicture">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Bp_John_Wilkins.jpg" id="bigpicture">
             <br style="clear:both">
             <div id="caption">
-                <span id="captionphrase">The metric system is a system of measurement that uses the meter, liter, and gram as base units of length (distance), capacity (volume), and weight (mass) respectively. To measure smaller or larger quantities, we use units derived from the metric units.</span>
+                <span id="captionphrase"><strong>The metric system</strong> is a system of measurement that uses the meter, liter, and gram as base units of length (distance), capacity (volume), and weight (mass) respectively. To measure smaller or larger quantities, we use units derived from the metric units.</span>
             </div>
         </div>
     </body>
@@ -274,7 +273,7 @@
                 $("#bigpicture").hide();
                 $("#caption").hide();
                 $("#bigpicture").attr("src","https://upload.wikimedia.org/wikipedia/commons/7/79/Bp_John_Wilkins.jpg").fadeIn(1000);
-                $("#caption").html("<p><strong>John Wilkins</p></strong> John Wilkins was an English mathematician who was one of the founders of the Royal Society. He wrote on astronomy and mechanical machines.");
+                $("#caption").html("<strong>John Wilkins<br></strong> John Wilkins was an English mathematician who was one of the founders of the Royal Society. He wrote on astronomy and mechanical machines.");
                 $("#caption").fadeIn(1000);
                 $(".thumb").css("border-width","0px")
                 $("#first").css("border-width","2px").css("border-color","grey").css("border-style","solid");
@@ -283,7 +282,7 @@
                 $("#bigpicture").hide();
                 $("#caption").hide();
                 $("#bigpicture").attr("src","https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Rev_John_Wilkins%2C_Chester.jpg/170px-Rev_John_Wilkins%2C_Chester.jpg").fadeIn(1000);
-                $("#caption").html("<p><strong>John Wilkins</p></strong> <p>Born: 1614, Fawsley (4 km S of Daventry), Northamptonshire, England.</p><p> Died: 19 November 1672, Chester, England</p>");
+                $("#caption").html("<strong>John Wilkins</strong> <br> Born: 1614, Fawsley (4 km S of Daventry), Northamptonshire, England.<br> Died: 19 November 1672, Chester, England");
                 $("#caption").fadeIn(1000);
                 $(".thumb").css("border-width","0px")
                 $("#second").css("border-width","2px").css("border-color","grey").css("border-style","solid");
@@ -292,7 +291,7 @@
                 $("#bigpicture").hide();
                 $("#caption").hide();
                 $("#bigpicture").attr("src","https://mathshistory.st-andrews.ac.uk/Biographies/Mouton/mouton_1.jpg").fadeIn(1000);
-                $("#caption").html("<p><strong>Gabriel Mouton</p></strong> Gabriel Mouton, the vicar of St. Paul's Church in Lyon, France, and a noted mathematician and astronomer, suggested a linear measure based on the arc of one minute of longitude, to be subdivided decimally.");
+                $("#caption").html("<strong>Gabriel Mouton</strong> <br>Gabriel Mouton, the vicar of St. Paul's Church in Lyon, France, and a noted mathematician and astronomer, suggested a linear measure based on the arc of one minute of longitude, to be subdivided decimally.");
                 $("#caption").fadeIn(1000);
                 $(".thumb").css("border-width","0px")
                 $("#third").css("border-width","2px").css("border-color","grey").css("border-style","solid");
