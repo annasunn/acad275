@@ -1,84 +1,232 @@
+
 <html>
     <head>
         <title>The History of Conversion</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <script src="jquery-3.6.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".thumb").css("opacity","0.5");
+            });
+        </script>
         <style>
             body{
                 font-family: sans-serif;
                 line-height: 1.5;
                 margin:0px;
+                margin-right:0px;
+                background-color: rgb(225, 225, 225);
+            }
+            #logoimg{
+            width:60px;
+            height:auto;
             }
             #header{
                 width:100%;
-                height:300px;
+                height:350px;
                 background-image: linear-gradient(#824EC5, #5D34FF);
                 position: absolute;
                 z-index: -2;
             }
-            #header2{
-                width:100%;
-                height:70px;
-                background-color: white;
-                opacity: 0.5;
-                position: absolute;
-                z-index: -1;
+            #content{
+                margin-left:20px;
+                margin-right:20px;
+
+            }
+            #navbar{
+            position: sticky;
+            top: 0px;
+            z-index: 5;
+            display: flex;
+            width: 100%;
+            height: 50px;
+            padding-top: 25px;
+            padding-left: 15%;
+            padding-right: 25px;
+            padding-bottom: 25px;
+            background-color: rgba(255,255,255,0.5);
             }
             #links{
+                flex: 80%;
                 float: right;
+                margin-top: 20px;
+                margin-right: 50px;
+                text-align: center;
             }
-            .link{
+            .navlink{
+                color: rgb(0, 0, 0);
+                font-style: normal;
+                padding: 10px;
+                margin-right: 20px;
+                margin-top: 20px;
+            }
+            .navlink:link{
+                color:rgb(0, 0, 0);
+                font-size: 20px;
                 text-decoration: none;
-                margin:20px;
-                color:black;
+                font-weight: none;
+                transition: 0.5s;
+
             }
+            .navlink:hover{
+                color: rgb(72, 72, 190);
+                text-decoration: none;
+            }
+
             #byo{
                 padding:13px;
                 border-radius: 30px;
                 background-color:#824EC5 ;
                 color:white;
             }
-            .content{
-            }
-            #jwbox{
-                width:20%;
-                float:right;
-                background-color: #574EC5;
-                color:white;
-                padding:7px;
-                border-radius: 5px;
-                text-align: center;
-                margin:5px;
-            }
-            #jwilkins{
-                width:100%;
-            }
-            #gmbox{
-                width:20%;
+            #thumbcolumn{
+                background-color: rgb(230, 230, 230);
+                width:15%;
                 float:left;
-                background-color: #574EC5;
-                color:white;
-                padding:7px;
-                border-radius: 5px;
+                margin-left: 7.5%;
+                margin-top: 10px;
+                border-radius: 30px;
+                padding:10px;
+            }
+            .thumb{
+                width:90%;
+                height:25%;
+                border-radius: 10px;
+                margin-left:4%;
+            }
+            #first{
+                margin-top: 20px;
+                margin-bottom:10px;
+            }
+            #second{
+                margin-top: 10px;
+                margin-bottom:10px;
+            }
+            #third{
+                margin-top: 10px;
+                margin-bottom:10px;
+            }
+            #mainphoto{
+                background-color: white;
+                width:60%;
+                max-height: 600px;
+                float:right;
+                margin-right:7.5%;
+                margin-top:10px;
+                border-color: rgb(196, 195, 195);
+                border-width: 2px;
+                border-style: solid;
+                border-radius: 30px;
+                padding:10px;
+            }
+            #bigpicture{
+                height:60%;
+                width:auto;
+                margin-left:25%;
+                margin-top:30px;
+                margin-bottom: 30px;
+                border-radius: 10px;
+            }
+            #caption{
+                width:90%;
+                height:50px;
+                background-color: rgb(227, 227, 227);
+                border-radius: 30px;
+                margin: auto;
                 text-align: center;
-                margin:5px;
+                padding-top:6px;
             }
-            #gmouton{
-                width:100%;
-            }
-        </style>
-        <script src="http://code.jquery.com/jquery.min.js"></script>
 
+
+    @media screen and (max-width:800px) {
+                #header{
+                    display: flex;
+                    flex-direction: column;
+            }   
+            }
+    @media screen and (max-width: 900px){
+        #navbar{
+            
+        }
+        #logo{
+            float: left;
+        }
+        #logoimg{
+            width:60px;
+            height:auto;
+        }
+        #links{
+            float: none;
+            display: inline-block;
+            flex-direction: column;
+            text-align: left;
+
+        }
+        }
+    @media screen and (max-width:900px){
+                #thumbcolumn{
+                    width:90%;
+                    height:130px;
+                    margin-left:5%;
+                    margin-right:5%;
+                    padding-bottom: 30px;
+                }
+                .thumb{
+                    height: 90%;
+                    border-radius: 30px;
+                }
+                #first{
+                    width:27%;
+                    margin-left: 4%;
+                    margin-right: 2%;
+                    margin-bottom:20px;
+
+                }
+                #second{
+                    width:27%;
+                    margin-left: 2%;
+                    margin-right: 2%;
+                    margin-bottom:20px;
+
+                }
+                #third{
+                    width:27%;
+                    margin-left: 2%;
+                    margin-right: 2%;
+                    margin-bottom:20px;
+
+                }
+
+                #mainphoto{
+                    width:90%;
+                    margin:auto;
+                }
+                #bigpicture{
+                    width:70%;
+                    border-radius: 10px;
+                    margin-left:15%
+                }
+            };
+        </style>
     </head>
     <body>
         <div id="header"></div>
-        <div id="header2"></div>
-
-        <br>
+        <div id="navbar">
+            <div id="logo">
+                <a href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/Homepage.html">
+                    <img id="logoimg" src="http://webdev.iyaclasses.com/~pamelaxi/acad275/IMG_2829.PNG">
+                </a>
+            </div>
         <div id="links">
-        <a href id="about" class="link" src="about.html"> About </a>
-        <a href id="orthodox" class="link" src="ortho.html"> Orthodox </a>
-        <a href id="unorthodox" class="link" src="unortho.html"> Unorthodox </a>
-        <a href id="educate" class="link" src="educate.html"> Educate </a>
-        <a href id="byo" class="link" src="byo.html"> Build Your Own </a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/About.html">About</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/unor.html">Unorthodox</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/orth.html">Orthodox</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/Educate.html">Educate</a>
+            <a class="navlink" id="byo" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/byo.html">Build your own</a>
+        </div>
         </div>
 
         <br><br><br>
@@ -86,21 +234,68 @@
         <h1 style="text-align: center;color:white">The History of Conversion</h1>
         <br><br><br><br>
         <div id="content">
-            <div id="jwbox">
-                <img id="jwilkins" src="jwilkins.jpeg">
-                John Wilkins
-            </div>
         The history of the metric system began during the Age of Enlightenment with measures of length and weight derived from nature, along with their decimal multiples and fractions. In 1668 John Wilkins, an English clergyman, proposed a coordinated system of units of measure for length, area, volume, and mass for use by philosophers. His unit of length, the “standard”, was the length of a pendulum that had a half-beat of one second, the units of area and volume were the square and cubic standard respectively and the unit of mass was the mass of a cubic standard of rainwater.
         <br><br>
-        <div id="gmbox">
-            <img id="gmouton" src="gmouton.jpeg">
-            Gabriel Mouton
-        </div>
         Two years later Gabriel Mouton, the vicar of St. Paul’s Church in Lyons, France, proposed a unit of length based on one minute of arc of a great circle of the earth (now called a nautical mile, 1852 m). He also proposed a coordinated way of naming the decimal multiples and submultiples of the basic unit of length. However the time was not right, either politically or technologically for the introduction of systems proposed by either Wilkins or Mouton.
         <br><br>
         The first practical realisation of the metric system came in 1799, during the French Revolution, after the existing system of measures had become impractical for trade, and was replaced by a decimal system based on the kilogram and the metre. The basic units were taken from the natural world. The unit of length, the metre, was based on the dimensions of the Earth, and the unit of mass, the kilogram, was based on the mass of a volume of water of one litre.
         <br><br>
         The Weights and Measures Act was adopted in Britain in 1824, and the official British Imperial System began. This system lasted unit 1864 when the metric system was adopted in Britain. The United States uses the Imperial System similar to the one developed by the British, but it's their own version.
+        <br><br>
+        Below is a interactive photo gallery of some significant figure in the birth of units:
         </div>
+
+        <div id="thumbcolumn">
+            <img id="first" class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/7/79/Bp_John_Wilkins.jpg">
+
+            <img id="second" class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Rev_John_Wilkins%2C_Chester.jpg/170px-Rev_John_Wilkins%2C_Chester.jpg">
+
+            <img id="third" class="thumb" src="https://mathshistory.st-andrews.ac.uk/Biographies/Mouton/mouton_1.jpg">
+        </div>
+        <div id="mainphoto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Bp_John_Wilkins.jpg" id="bigpicture">
+            <br style="clear:both">
+            <div id="caption">
+                <span id="captionphrase"></span>
+            </div>
+        </div>
+
     </body>
+    <script>
+      $(".thumb").hover(
+                function(){
+                    $(this).css("opacity", "1.0");
+                },
+                function(){
+                    $(this).css("opacity", "0.5");
+                });
+            
+            $("#first").click(function(){
+                $("#bigpicture").hide();
+                $("#caption").hide();
+                $("#bigpicture").attr("src","https://upload.wikimedia.org/wikipedia/commons/7/79/Bp_John_Wilkins.jpg").fadeIn(1000);
+                $("#caption").html("John Wilkins");
+                $("#caption").fadeIn(1000);
+                $(".thumb").css("border-width","0px")
+                $("#first").css("border-width","2px").css("border-color","grey").css("border-style","solid");
+            });
+            $("#second").click(function(){
+                $("#bigpicture").hide();
+                $("#caption").hide();
+                $("#bigpicture").attr("src","https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Rev_John_Wilkins%2C_Chester.jpg/170px-Rev_John_Wilkins%2C_Chester.jpg").fadeIn(1000);
+                $("#caption").html("John Wilkins");
+                $("#caption").fadeIn(1000);
+                $(".thumb").css("border-width","0px")
+                $("#second").css("border-width","2px").css("border-color","grey").css("border-style","solid");
+            });
+            $("#third").click(function(){
+                $("#bigpicture").hide();
+                $("#caption").hide();
+                $("#bigpicture").attr("src","https://mathshistory.st-andrews.ac.uk/Biographies/Mouton/mouton_1.jpg").fadeIn(1000);
+                $("#caption").html("Gabriel Mouton");
+                $("#caption").fadeIn(1000);
+                $(".thumb").css("border-width","0px")
+                $("#third").css("border-width","2px").css("border-color","grey").css("border-style","solid");
+            });
+    </script>
 </html>
