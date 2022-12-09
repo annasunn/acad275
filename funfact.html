@@ -1,6 +1,9 @@
+
+
 <html>
     <head>
         <title>Fun Facts About Conversion</title>
+        <meta charset="utf-8">
         <style>
             body{
                 font-family: sans-serif;
@@ -8,51 +11,159 @@
             }
             #header{
                 width:100%;
-                height:300px;
+                height:350px;
                 background-image: linear-gradient(#824EC5, #5D34FF);
                 position: absolute;
                 z-index: -2;
-            }
-            #header2{
-                width:100%;
-                height:70px;
-                background-color: white;
-                opacity: 0.5;
-                position: absolute;
-                z-index: -1;
-            }
-            #links{
-                float: right;
-                margin-top:10px;
-            }
-            .link{
-                text-decoration: none;
-                margin:20px;
-                color:black;
-            }
-            #byo{
-                padding:13px;
-                border-radius: 30px;
-                background-color:#824EC5 ;
-                color:white;
             }
             #content{
                 padding-left:20px;
                 padding-right:20px;
             }
+            @media screen and (max-width:800px) {
+            #header{
+                display: flex;
+                flex-direction: column;
+        }   
+        }
+        #navbar{
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgba(255,255,255,0.5);
+}
+#logoimg{
+    width: 40px;
+    flex: 20%;
+    padding-left: 50px;
+}
+#links{
+    flex: 80%;
+    float: right;
+    margin-top: 20px;
+    margin-right: 50px;
+    text-align: right;
+}
+.navlink{
+    color:#000000;
+    font-style: normal;
+    padding: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.navlink:link{
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: none;
+    transition: 0.5s;
+
+}
+.navlink:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+
+
+
+@media screen and (max-width: 900px){
+
+    #logo{
+        float: left;
+    }
+    #logoimg{
+        height: 10px;
+    }
+    #links{
+        float: none;
+        display: inline-block;
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    
+}
+            #history{
+                width:29%;
+                display: inline-block;
+                margin:2%;
+                text-align: center;
+                border-width: 1px;
+                border-style: solid;
+            }
+            #historytitle{
+                text-decoration: none;
+                color:black;                
+            }
+            #historypic{
+                width:60%;
+                height: auto;
+                border-radius: 5px;
+            }
+
+            #global{
+                width:29%;
+                display: inline-block;
+                margin:1.7%;
+                text-align: center;
+                border-width: 1px;
+                border-style: solid;
+
+            }
+            .navlink:hover{
+    color: rgb(72, 72, 190);
+    text-decoration: none;
+}
+            #logoimg{
+        width:60px;
+        height:auto;
+      }
+      #byo{
+    padding:13px;
+    border-radius: 30px;
+    background-color:#824EC5 ;
+    color:white;
+}
+@media screen and (max-width:900px){
+                #history{
+                    width:90%;
+                    margin-left:5%;
+                }
+                #global{
+                    width:90%;
+                    margin-left:5%;
+                }
+                #funfacts{
+                    width:90%;
+                    margin-left:5%;
+                }
+                #unitmap{
+                    width:100%;
+                }
+            };
         </style>
     </head>
     <body>
         <div id="header"></div>
-        <div id="header2"></div>
-
-        <br>
+        <div id="navbar">
+            <div id="logo">
+                <a href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/Homepage.html">
+                    <img id="logoimg" src="http://webdev.iyaclasses.com/~pamelaxi/acad275/IMG_2829.PNG">
+                </a>
+            </div>
         <div id="links">
-        <a href id="about" class="link" src="about.html"> About </a>
-        <a href id="orthodox" class="link" src="ortho.html"> Orthodox </a>
-        <a href id="unorthodox" class="link" src="unortho.html"> Unorthodox </a>
-        <a href id="educate" class="link" src="educate.html"> Educate </a>
-        <a href id="byo" class="link" src="byo.html"> Build Your Own </a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/About.html">About</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/unor.html">Unorthodox</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/orth.html">Orthodox</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/Educate.html">Educate</a>
+            <a class="navlink" id="byo" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/byo.html">Build your own</a>
+        </div>
         </div>
 
         <br><br><br><br><br>
@@ -63,11 +174,11 @@
             Most units are imperical or metric, but the world doesn't always have to black and white! Here are some fun, werid conversions:
             <ol>
                 <li>beard-second (distance)<br>
-                    A unit inspired by the light-year, but for extremely short distances. A beard-second is defined as the length an average physicist’s beard grows in a second (about 5 nanometers).
+                    A unit inspired by the light-year, but for extremely short distances. A beard-second is defined as the length an average physicistâ€™s beard grows in a second (about 5 nanometers).
                 </li>
                 <li>
                     Moot (distance)<br>
-                    One smoot is defined to be equal to five feet and seven inches (1.70 m), the height of Oliver R. Smoot. He was an MIT student whose fraternity pledge in 1958 was to be used to measure the length of the Harvard Bridge. The bridge’s length was measured to be 364.4 smoots plus or minus one ear.
+                    One smoot is defined to be equal to five feet and seven inches (1.70 m), the height of Oliver R. Smoot. He was an MIT student whose fraternity pledge in 1958 was to be used to measure the length of the Harvard Bridge. The bridgeâ€™s length was measured to be 364.4 smoots plus or minus one ear.
                     Perhaps it was fate that Oliver Smoot later became Chairman of the American National Standards Institute (ANSI) and President of the International Organization for Standardization (ISO).
                 </li>
                 <li>
@@ -76,11 +187,11 @@
                 </li>
                 <li>
                     bloit (distance)<br>
-                    In the Zork games, the Great Underground Empire had its own measuring system. The most common unit was the bloit, defined as the distance the king’s favorite pet could run in one hour. The length varied greatly, but one account puts the bloit as the equivalent of approximately 2/3 of a mile.
+                    In the Zork games, the Great Underground Empire had its own measuring system. The most common unit was the bloit, defined as the distance the kingâ€™s favorite pet could run in one hour. The length varied greatly, but one account puts the bloit as the equivalent of approximately 2/3 of a mile.
                 </li>
                 <li>
                     pyramid inch (distance)<br>
-                    Claimed by pyramidologists to have been used in ancient times, a Pyramid inch was one twenty-fifth of a “sacred cubit”, 1.00106 British inches, or 2.5426924 centimeters.
+                    Claimed by pyramidologists to have been used in ancient times, a Pyramid inch was one twenty-fifth of a â€œsacred cubitâ€, 1.00106 British inches, or 2.5426924 centimeters.
                 </li>
                 <li>
                     Sheppey (distance) <br>
@@ -101,7 +212,7 @@
                 </li>
                 <li>
                     Potrzebie (distance)<br>
-                    Issue 33 of Mad magazine contained an article describing the “Potrzebie System of Weights and Measures”, developed by the then 19-year-old Donald Knuth (who later became a very famous computer scientist). Knuth said the basis of this new, revolutionary system was the potrzebie, equaling the thickness of Mad issue 26, or 2.263348517438173216473 mm. Some other units in this system were whatmeworry, cowznofski, vreeble, hoo and hah.
+                    Issue 33 of Mad magazine contained an article describing the â€œPotrzebie System of Weights and Measuresâ€, developed by the then 19-year-old Donald Knuth (who later became a very famous computer scientist). Knuth said the basis of this new, revolutionary system was the potrzebie, equaling the thickness of Mad issue 26, or 2.263348517438173216473 mm. Some other units in this system were whatmeworry, cowznofski, vreeble, hoo and hah.
                 </li>
             </ol>
         </div>
