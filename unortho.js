@@ -514,10 +514,9 @@ var findMult = function () {
 }
 
 var answer = function () {
-    clearAns();
     var input = $('#u1val').val();
     var ans = input * findMult();
-    $('#answer').html('<span style="color: white">' + ans.toFixed(4) + '</h1>');
+    $('#answer').html('<h1 id="answertext" style="color:white;">Answer:</h1><span style="color: white">' + ans.toFixed(4) + "</span>");
 }
 
 
