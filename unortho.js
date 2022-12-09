@@ -517,7 +517,7 @@ var answer = function () {
     clearAns();
     var input = $('#u1val').val();
     var ans = input * findMult();
-    $('#answer').append('<span style="color: white">' + ans.toFixed(4) + '</h1>');
+    $('#answer').html('<span style="color: white">' + ans.toFixed(4) + '</h1>');
 }
 
 
