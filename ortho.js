@@ -211,7 +211,7 @@ var findMult = function () {
 var answer = function () {
     var input = $('#u1val').val();
     var ans = input * findMult();
-    $('#answer').append('<span style="color: white">' + ans + '</h1>');
+    $('#answer').html('<span style="color: white">' + ans + '</h1>');
 }
 
 
