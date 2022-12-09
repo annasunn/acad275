@@ -102,8 +102,8 @@ var convert = function(){
     var right = convertto.val;
     ans = left/right; 
     ans = ans.toFixed(2);
-    $("#answer").append(ans);
-    $('#imgs').append('<h1>' + ans + '</h1><img style="width:20%" src="' + convertto.img + '"><h1>=' + convertfromamt + '</h1><img style="width:20%" src="' + convertfrom.img + '">')
+    $("#answer").html(ans);
+    $("#imgs").html('<h1>' + ans + '</h1><img style="width:20%" src="' + convertto.img + '"><h1>=' + convertfromamt + '</h1><img style="width:20%" src="' + convertfrom.img + '">');
     $('#imgs').css('display', 'flex');
 }
 
