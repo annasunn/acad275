@@ -1,278 +1,331 @@
-<html>
-<head>
-    <title>Orthodox Converter</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <style>
-    body{
-        margin:0px;
-        font-family:sans-serif;
 
+<html>
+    <head>
+        <title>Orthodox Converter</title>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+            body{
+            margin:0px;
+            font-family:sans-serif;
+        }
+    #navbar{
+        position: sticky;
+        top: 0px;
+        z-index: 5;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: rgba(255,255,255,0.5);
     }
-    #header2{
-        width:100%;
-        height:70px;
-        background-color: white;
-        opacity: 0.5;
-        position: absolute;
-        z-index: 0;
-        margin:0;
-        padding:0;
+    #logoimg{
+        width: 40px;
+        flex: 20%;
+        padding-left:50px;
     }
     #links{
+        flex: 80%;
         float: right;
-        margin-top:10px;
+        margin-top: 20px;
+        margin-right: 50px;
+        text-align: right;
     }
-    .link{
-        text-decoration: none;
-        margin:20px;
+    .navlink{
+        color: black;
+        font-style: normal;
+        padding: 10px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .navlink:link{
         color:black;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: none;
+        transition: 0.5s;
+    
     }
+    .navlink:hover{
+        color: rgb(72, 72, 190);
+        text-decoration: none;
+    }
+    
     #byo{
         padding:13px;
-        margin:0;
         border-radius: 30px;
         background-color:#824EC5 ;
         color:white;
     }
-    #title{
-        font-size: xx-large;
-        text-align:center;
-    }
-    #buttons{
-        margin-left:40px;
-        margin-right:40px;
-        width:1400px;
-        font-size: large;
-        text-align:center;
-        margin: 0 200px 0px 200px;
-        
-    }
-    #data{
-        height:800px; 
-        width:100px; 
-        border-radius:15px; 
-        float:center
-    }
-    #answer{
-        justify-content: center;
-        display:inline-block;
-        width:350px;
-        height:60px;
-        border-style: solid;
-        border-color:black;
-        border-width: 0.25px;
-        border-radius: 5px;
-        font-size: large;
-        font-weight:lighter;
-        opacity:80%;
-    } 
-    #inputnumber{
-        width:280px;
-        justify-content: center;
-        display:inline-block;
-        width:300px;
-        height:60px;
-        border-style: solid;
-        border-color:black;
-        border-width: 0.25px;
-        padding:5px;
-        font-size: large;
-        font-weight:lighter;
-        opacity:80%;
-    }
-    #ft{
-        width:95px;
-        font-size: large;
-        opacity:80%;
-        justify-content: center;
-        display:inline-block;
-        height:60px;
-        border-style: solid;
-        border-color:black;
-        border-width: 0.25px;
-        padding:5px;
-        font-size: large;
-        font-weight:lighter;
-    }
-    #in{
-        width:95px;
-        font-size: large;
-        justify-content: center;
-        display:inline-block;
-        height:60px;
-        border-style: solid;
-        border-color:black;
-        border-width: 0.25px;
-        padding:5px;
-        font-size: large;
-        font-weight:lighter;
-        opacity:80%;
-    }
-    #cm{
-        width:95px;
-        font-size: large;
-        justify-content: center;
-        display:inline-block;
-        height:60px;
-        border-style: solid;
-        border-color:black;
-        border-width: 0.25px;
-        padding:5px;
-        font-size: large;
-        font-weight:lighter;
-        opacity:80%;
-    }
-    #smth1{
-        margin-right: 20px;
-        margin-bottom: 20px;
-        float: left;
-    }
-    #smth2{
-        margin-top: 20px;
-        margin-right: 20px;
-        float: left;
-    }
-    #smth3{
-        float:left;
-
-    }
-    #answer{
-        justify-content: center;
-        display:inline-block;
-        width:300;
-        height:150px;
-        border-style: solid;
-        border-color:black;
-        border-width: 0.25px;
-        border-radius: 5px;
-        font-size: large;
-        font-weight:lighter;
-        opacity:80%;
-    }
-    #smthelse{
-        width: 840px;
-        height: 70px;
-        border-style: solid;
-        border-color:black;
-        border-width: 0.25px;
-        border-radius: 20px;
-        font-size: large;
-        font-weight:lighter;
-        opacity:80%;
-        float: center;
-    }
-    #submit {
-            background: white;
-            color: #574EC5;
-            border-style: solid;
-            border-color: white;
-            border-radius: 15px;
-            height: 50px;
-            width: 100%;
-            font-size: medium;
-            text-shadow: none;
-            text-align: center;
-            font-weight: bold;
-            opacity: 100%;
-    }
-    #u1val{
-        height: 50px;
-    }
-    .types{
-        height: 50px;
-    }
-    </style>
-
-
-</head>
-
-<body>
-
-    <div id="header"></div>
-    <div id="header2"></div>
-
-    <br>
-    <div id="links">
-    <a href id="about" class="link" src="about.html"> About </a>
-    <a href id="orthodox" class="link" src="ortho.html"> Orthodox </a>
-    <a href id="unorthodox" class="link" src="unortho.html"> Unorthodox </a>
-    <a href id="educate" class="link" src="educate.html"> Educate </a>
-    <a href id="byo" class="link" src="byo.html"> Build Your Own </a>
-    </div>
-
-<br><br><br>
-
-<div id="title">
-    <h1>Orthodox Converter</h1>
-</div>
-
-<br><br>
-
-<div style="margin: 0 100px 0 100px;">
-    <div id="distance">
-        <input id="distance" type="submit" value="Distance" style="height:80px; color: white; width: 100px; float:left; height:100px; background:#824EC5; border-radius:15px; border-color:#824EC5;font-size:x-large;width: 33.33%;
-        padding: 10px 0 10px 0;
-        text-align: center;
-        float: left; font-weight:300;"/> 
-    </div>
-
-    <div id="volume">
-        <input id="volume" type="submit" value="Volume" style="height:80px; color: white; width: 100px; float:left; height:100px; background:#824EC5; border-radius:15px; border-color:#824EC5;font-size:x-large;width: 33.33%;
-        padding: 10px 0 10px 0;
-        text-align: center;
-        float: left;font-weight:300;"/> 
-    </div>
-
-    <div id="Speed">
-        <input id="weight" type="submit" value="Weight" style="height:80px; color: white; width: 100px; float:left; height:100px; background:#824EC5; border-radius:15px; border-color:#824EC5; font-size:x-large;width: 33.33%;
-        padding: 10px 0 10px 0;
-        text-align: center;
-        float: left;font-weight:300;"/> 
-    </div>
-</div>
-
-<br><br><br>
-
-<div id="data" style="height:400px; width:1425px; border-radius:15px; float:center; background-image: linear-gradient(#824EC5, #5D34FF);width: 100%; padding: 100px 0 100px 0; text-align: center;">
     
-    <div style="text-align: center;">
-        <form style="display:inline-block; text-align: left">
-
-            <div id="smth1">
-
-                <input class="yes" id="u1val" type="number" name="answer" placeholder="0.00" required/>
-                <select name="type" class="types" id="unitselect" placeholder="Choose your icon" name="Choose your icon" required>
-                </select>
-
+    
+    
+    @media screen and (max-width: 900px){
+        #navbar{
+        }
+        #logo{
+            float: left;
+        }
+        #logoimg{
+            height: 10px;
+        }
+        #links{
+            float: none;
+            display: inline-block;
+            flex-direction: column;
+            text-align: left;
+    
+        }
+    }
+    #logoimg{
+            width:60px;
+            height:auto;
+          }
+    
+        #title{
+            font-size: xx-large;
+            text-align:center;
+        }
+        #buttons{
+            margin-left:40px;
+            margin-right:40px;
+            width:1400px;
+            font-size: large;
+            text-align:center;
+            margin: 0 200px 0px 200px;
+            
+        }
+        #data{
+            height:800px; 
+            width:100px; 
+            border-radius:15px; 
+            float:center
+        }
+        #answer{
+            justify-content: center;
+            display:inline-block;
+            width:350px;
+            height:60px;
+            border-style: solid;
+            border-color:black;
+            border-width: 0.25px;
+            border-radius: 5px;
+            font-size: large;
+            font-weight:lighter;
+            opacity:80%;
+        } 
+        #inputnumber{
+            width:280px;
+            justify-content: center;
+            display:inline-block;
+            width:300px;
+            height:60px;
+            border-style: solid;
+            border-color:black;
+            border-width: 0.25px;
+            padding:5px;
+            font-size: large;
+            font-weight:lighter;
+            opacity:80%;
+        }
+        #ft{
+            width:95px;
+            font-size: large;
+            opacity:80%;
+            justify-content: center;
+            display:inline-block;
+            height:60px;
+            border-style: solid;
+            border-color:black;
+            border-width: 0.25px;
+            padding:5px;
+            font-size: large;
+            font-weight:lighter;
+        }
+        #in{
+            width:95px;
+            font-size: large;
+            justify-content: center;
+            display:inline-block;
+            height:60px;
+            border-style: solid;
+            border-color:black;
+            border-width: 0.25px;
+            padding:5px;
+            font-size: large;
+            font-weight:lighter;
+            opacity:80%;
+        }
+        #cm{
+            width:95px;
+            font-size: large;
+            justify-content: center;
+            display:inline-block;
+            height:60px;
+            border-style: solid;
+            border-color:black;
+            border-width: 0.25px;
+            padding:5px;
+            font-size: large;
+            font-weight:lighter;
+            opacity:80%;
+        }
+        #smth1{
+            margin-right: 20px;
+            margin-bottom: 20px;
+            float: left;
+        }
+        #smth2{
+            margin-top: 20px;
+            margin-right: 20px;
+            float: left;
+        }
+        #smth3{
+            float:left;
+    
+        }
+        #answer{
+            justify-content: center;
+            display:inline-block;
+            width:300;
+            height:150px;
+            border-style: solid;
+            border-color:rgb(255, 255, 255);
+            border-width: 0.25px;
+            border-radius: 5px;
+            font-size: large;
+            font-weight:lighter;
+            opacity:80%;
+        }
+        #smthelse{
+            width: 840px;
+            height: 70px;
+            border-style: solid;
+            border-color:black;
+            border-width: 0.25px;
+            border-radius: 20px;
+            font-size: large;
+            font-weight:lighter;
+            opacity:80%;
+            float: center;
+        }
+        #submit {
+                background: white;
+                color: #574EC5;
+                border-style: solid;
+                border-color: white;
+                border-radius: 15px;
+                height: 50px;
+                width: 100%;
+                font-size: medium;
+                text-shadow: none;
+                text-align: center;
+                font-weight: bold;
+                opacity: 100%;
+        }
+        #u1val{
+            height: 50px;
+        }
+        .types{
+            height: 50px;
+        }
+        </style>
+    
+    
+    </head>
+    
+    <body>
+    
+        <div id="header"></div>
+        <div id="navbar">
+            <div id="logo">
+                <a href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/Homepage.html">
+                    <img id="logoimg" src="http://webdev.iyaclasses.com/~pamelaxi/acad275/IMG_2829.PNG">
+                </a>
             </div>
-
-            <div id="smth2" style="font-weight:bold; color:white; font-size:large;">
-
-             Convert To
-
-            </div>
-                    
-            <div id="smth3" style="float:left">
-                    
-                <select name="type" class="types" id="unitselect2" placeholder="Choose your icon" name="Choose your icon" required>
-                </select>
-
-            </div>
-
-            <div style="float:center">
-
-                <input id="submit" type="button" value="Convert!" style="text-align: center">
-
-            </div>
-                
-        </form>
+        <div id="links">
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/About.html">About</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/unor.html">Unorthodox</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/orth.html">Orthodox</a>
+            <a class="navlink" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/Educate.html">Educate</a>
+            <a class="navlink" id="byo" href="http://webdev.iyaclasses.com/~pamelaxi/acad275/final%20project/byo.html">Build your own</a>
+        </div>
+        </div>
+    
+    <br><br><br>
+    
+    <div id="title">
+        <h1>Orthodox Converter</h1>
+    </div>
+    
+    <br><br>
+    
+    <div style="margin: 0 100px 0 100px;">
+        <div id="distance">
+            <input id="distance" type="submit" value="Distance" style="height:80px; color: white; width: 100px; float:left; height:100px; background:#824EC5; border-radius:15px; border-color:#824EC5;font-size:x-large;width: 33.33%;
+            padding: 10px 0 10px 0;
+            text-align: center;
+            float: left; font-weight:300;"/> 
+        </div>
+    
+        <div id="volume">
+            <input id="volume" type="submit" value="Volume" style="height:80px; color: white; width: 100px; float:left; height:100px; background:#824EC5; border-radius:15px; border-color:#824EC5;font-size:x-large;width: 33.33%;
+            padding: 10px 0 10px 0;
+            text-align: center;
+            float: left;font-weight:300;"/> 
+        </div>
+    
+        <div id="Speed">
+            <input id="weight" type="submit" value="Weight" style="height:80px; color: white; width: 100px; float:left; height:100px; background:#824EC5; border-radius:15px; border-color:#824EC5; font-size:x-large;width: 33.33%;
+            padding: 10px 0 10px 0;
+            text-align: center;
+            float: left;font-weight:300;"/> 
+        </div>
+    </div>
+    
+    <br><br><br>
+    
+    <div id="data" style="height:400px; width:1425px; border-radius:15px; float:center; background-image: linear-gradient(#824EC5, #5D34FF);width: 100%; padding: 100px 0 100px 0; text-align: center;">
         
-    </div>
-    <div id="answer">
-        <h1 id="answertext" style="color:white;">Answer: 
-    </div>
-
-    <script src="ortho.js"></script>
-</body>
-
-</html>
+        <div style="text-align: center;">
+            <form style="display:inline-block; text-align: left">
+    
+                <div id="smth1">
+    
+                    <input class="yes" id="u1val" type="number" name="answer" placeholder="0.00" required/>
+                    <select name="type" class="types" id="unitselect" placeholder="Choose your icon" name="Choose your icon" required>
+                    </select>
+    
+                </div>
+    
+                <div id="smth2" style="font-weight:bold; color:white; font-size:large;">
+    
+                 Convert To
+    
+                </div>
+                        
+                <div id="smth3" style="float:left">
+                        
+                    <select name="type" class="types" id="unitselect2" placeholder="Choose your icon" name="Choose your icon" required>
+                    </select>
+    
+                </div>
+    
+                <div style="float:center">
+    
+                    <input id="submit" type="button" value="Convert!" style="text-align: center">
+    
+                </div>
+                    
+            </form>
+            
+        </div>
+        <div id="answer">
+            <h1 id="answertext" style="color:white;">Answer: 
+        </div>
+    
+        <script src="ortho.js"></script>
+    </body>
+    
+    </html>
